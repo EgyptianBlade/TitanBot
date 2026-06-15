@@ -19,7 +19,21 @@ export default {
       
       if (message.author.bot || !message.guild) return;
 
-      await handleLeveling(message, client);
+const content = message.content.toLowerCase();
+
+if (content === "shlomie") {
+  await message.reply("which one of you goys is talking about me");
+}
+
+if (content.includes("Shlomie")) {
+  await message.channel.send("If i hear my name being mentioned one more time by you fuck niggas ill rob all of you");
+}
+
+if (content === "yo") {
+  await message.reply("hello goy, donate 5 trillion to israel");
+}
+
+await handleLeveling(message, client);
     } catch (error) {
       logger.error('Error in messageCreate event:', error);
     }

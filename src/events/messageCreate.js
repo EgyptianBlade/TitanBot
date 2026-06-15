@@ -25,12 +25,16 @@ if (content === "shlomie") {
   await message.reply("which one of you goys is talking about me");
 }
 
-if (content.includes("Shlomie")) {
+if (content.includes("yo Shlomie")) {
   await message.channel.send("If i hear my name being mentioned one more time by you fuck niggas ill rob all of you");
 }
 
 if (content === "yo") {
   await message.reply("hello goy, donate 5 trillion to israel");
+}
+
+      if (content === "shlomie please tell abdoul to stfu") {
+  await message.reply("abdoul, you are a submissive and breedable goy, dont let me show you what the great wall of shlomie is capable of doing have you end up in til aviv");
 }
 
 await handleLeveling(message, client);

@@ -36,6 +36,9 @@ if (content === "yo") {
       if (content === "shlomie please tell abdoul to stfu") {
   await message.reply("abdoul, you are a submissive and breedable goy, dont let me show you what the great wall of shlomie is capable of doing have you end up in til aviv");
 }
+      if (content === "shlomie, which one of us here is a real nigga?") {
+  await message.reply("nigga stfu and hop off my circumsized dick for one second");
+}
 
 await handleLeveling(message, client);
     } catch (error) {

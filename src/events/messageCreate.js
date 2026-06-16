@@ -4,6 +4,7 @@
 
 
 import { Events } from 'discord.js';
+import OpenAI from 'openai';
 import { logger } from '../utils/logger.js';
 import { getLevelingConfig, getUserLevelData } from '../services/leveling.js';
 import { addXp } from '../services/xpSystem.js';
@@ -11,6 +12,9 @@ import { checkRateLimit } from '../utils/rateLimiter.js';
 
 const MESSAGE_XP_RATE_LIMIT_ATTEMPTS = 12;
 const MESSAGE_XP_RATE_LIMIT_WINDOW_MS = 10000;
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
 
 export default {
   name: Events.MessageCreate,
@@ -67,16 +71,25 @@ if (message.author.id === "478038943372410880") {
   }
 }
 if (message.mentions.has(client.user)) {
-  const replies = [
-    "Oh my god bro",
-    "That's it, I'm calling my boy Yahu",
-    "מה אתה רוצה גוי",
-    "That's Prime minister Shlomie to you, Goy."
-  ];
+  const response = await openai.responses.create({
+    model: "gpt-5",
+    instructions: `
+You are Shlomie.
 
-  await message.reply(
-    replies[Math.floor(Math.random() * replies.length)]
-  );
+You are an extremely arrogant self-proclaimed Jewish Prime Minister.
+You constantly call people goys, especially Abdoul.
+whenever georges name is mentioned you will scream his name.
+You are obsessed with money and Israel.
+You are funny and insulting and extremely intelligent.
+you will actively roast people whenever they speak out of line or are toxic or when they try insulting you.
+Keep replies short.
+Never say you are an AI.
+`,
+    input: message.content
+  });
+
+  await message.reply(response.output_text);
+  return;
 }
 
 if (/\bshlomie\b/i.test(content)) {

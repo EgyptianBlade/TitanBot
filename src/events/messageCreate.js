@@ -25,17 +25,19 @@ if (/\bshlomie\b/i.test(content)) {
   await message.reply("which one of you goys is talking about me?");
 }
 
-      if (message.author.id === "1147637655262199918") {
+if (message.author.id === "1147637655262199918") {
   const replies = [
     "Freaky goy",
-    "John, how did your prostate exam go? I think it's very interesting you enjoy having three fingers up your femgoy ass!"
+    "John, how did your prostate exam go? ..."
   ];
 
-   if (Math.random() < 0.40) {
+  if (Math.random() < 0.40) {
     await message.reply(
       replies[Math.floor(Math.random() * replies.length)]
     );
   }
+}
+
 if (/\bthank you\b/i.test(content)) {
   await message.reply("Thank you James, thank you!");
 }
@@ -51,15 +53,9 @@ if (/\b(money|bank|dollar|dollars)\b/i.test(content)) {
 if (/\bisrael\b/i.test(content)) {
   await message.reply("hello goy, remember to donate 5 trillion to israel");
 }
+
 if (/\bgeorge\b/i.test(content)) {
   await message.reply("GEEEEOOOrge EEEEEEEEEshak!");
-}
-if (content === "shlomie please tell abdoul to stfu") {
-  await message.reply("abdoul, you are a submissive and breedable goy, dont let me show you what the great wall of shlomie is capable of doing have you end up in tel aviv");
-}
-
-if (content === "shlomie, which one of us here is a real nigga?") {
-  await message.reply("nigga stfu and hop off my circumsized dick for one second");
 }
 
 if (message.author.id === "1079975965112926208") {
@@ -78,14 +74,13 @@ if (message.author.id === "1079975965112926208") {
       replies[Math.floor(Math.random() * replies.length)]
     );
   }
+}
 
 if (message.mentions.has(client.user)) {
   const replies = [
-    "If I hear my name being mentioned one more time by one of you fuck niggas I'll rob all of you",
     "Oh my god bro",
     "That's it, I'm calling my boy Yahu",
-    "מה אתה רוצה גוי",
-    "That's Prime minister Shlomie to you, Goy."
+    "מה אתה רוצה גוי"
   ];
 
   await message.reply(
@@ -93,7 +88,6 @@ if (message.mentions.has(client.user)) {
   );
 }
 
-await handleLeveling(message, client);
 await handleLeveling(message, client);
     } catch (error) {
       logger.error('Error in messageCreate event:', error);

@@ -31,10 +31,11 @@ if (/\bshlomie\b/i.test(content)) {
     "John, how did your prostate exam go? I think it's very interesting you enjoy having three fingers up your femgoy ass!"
   ];
 
-  await message.reply(
-    replies[Math.floor(Math.random() * replies.length)]
-  );
-}
+   if (Math.random() < 0.40) {
+    await message.reply(
+      replies[Math.floor(Math.random() * replies.length)]
+    );
+  }
 if (/\bthank you\b/i.test(content)) {
   await message.reply("Thank you James, thank you!");
 }
@@ -72,10 +73,11 @@ if (message.author.id === "1079975965112926208") {
     "haha..*moan*"
   ];
 
-  await message.reply(
-    replies[Math.floor(Math.random() * replies.length)]
-  );
-}
+  if (Math.random() < 0.40) {
+    await message.reply(
+      replies[Math.floor(Math.random() * replies.length)]
+    );
+  }
 
 if (message.mentions.has(client.user)) {
   const replies = [

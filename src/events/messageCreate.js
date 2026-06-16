@@ -51,7 +51,8 @@ if (/\israel\b/i.test(content)) {
     "Umm.. Abdoul? Why are you typing?",
     "Oh no, not again.",
     "What a good lebanese Goy!",
-    "אתה הולך לישראל"
+    "אתה הולך לישראל",
+    "haha..*moan*"
   ];
 
        if (/\bshlomie\b/i.test(content)) {
@@ -65,7 +66,8 @@ if (/\israel\b/i.test(content)) {
     "If I hear my name being mentioned one more time by one of you fuck niggas I'll rob all of you",
     "Oh my god bro",
     "That's it, I'm calling my boy Yahu",
-    "מה אתה רוצה גוי"
+    "מה אתה רוצה גוי",
+    "That's Prime minister Shlomie to you, Goy."
   ];
 
   return message.reply(

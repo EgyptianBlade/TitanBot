@@ -50,7 +50,9 @@ if (/\b(money|bank|dollar|dollars)\b/i.test(content)) {
 if (/\bisrael\b/i.test(content)) {
   await message.reply("hello goy, remember to donate 5 trillion to israel");
 }
-
+if (/\bgeorge\b/i.test(content)) {
+  await message.reply("GEEEEOOOrge EEEEEEEEEshak!");
+}
 if (content === "shlomie please tell abdoul to stfu") {
   await message.reply("abdoul, you are a submissive and breedable goy, dont let me show you what the great wall of shlomie is capable of doing have you end up in tel aviv");
 }

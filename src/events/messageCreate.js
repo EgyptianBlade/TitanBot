@@ -25,6 +25,16 @@ if (/\bshlomie\b/i.test(content)) {
   await message.reply("which one of you goys is talking about me?");
 }
 
+      if (message.author.id === "1147637655262199918") {
+  const replies = [
+    "Freaky goy",
+    "John, how did your prostate exam go? I think it's very interesting you enjoy having three fingers up your femgoy ass!"
+  ];
+
+  await message.reply(
+    replies[Math.floor(Math.random() * replies.length)]
+  );
+}
 if (/\bthank you\b/i.test(content)) {
   await message.reply("Thank you James, thank you!");
 }

@@ -20,7 +20,7 @@ export default {
       if (message.author.bot || !message.guild) return;
 
 const content = message.content.toLowerCase();
-
+console.log(message.author.id);
 if (/\bshlomie\b/i.test(content)) {
   await message.reply("which one of you goys is talking about me?");
 }
@@ -60,11 +60,10 @@ if (message.author.id === "1079975965112926208") {
     "haha..*moan*"
   ];
 
-  if (Math.random() < 0.25) {
-    await message.reply(
-      replies[Math.floor(Math.random() * replies.length)]
-    );
-  }
+  await message.reply(
+    replies[Math.floor(Math.random() * replies.length)]
+  );
+}
 }
 
 if (message.mentions.has(client.user)) {

@@ -25,14 +25,15 @@ if (content === "shlomie") {
   await message.reply("which one of you goys is talking about me");
 }
 
-if (content.includes("yo Shlomie")) {
-  await message.channel.send("If i hear my name being mentioned one more time by you fuck niggas ill rob all of you");
+if (message.mentions.has(client.user)) {
+  await message.reply("If I hear my name being mentioned one more time by one of you fuck niggas I'll rob all of you");
 }
-
-if (content === "yo") {
-  await message.reply("hello goy, donate 5 trillion to israel");
+if (/\b(money|bank|dollar|dollars)\b/i.test(content)) {
+  await message.reply("*eyes widen, ears perk up* M-money..? *sniff sniff*");
 }
-
+if (/\israel\b/i.test(content)) {
+  await message.reply("hello goy, remember to donate 5 trillion to israel");
+}
       if (content === "shlomie please tell abdoul to stfu") {
   await message.reply("abdoul, you are a submissive and breedable goy, dont let me show you what the great wall of shlomie is capable of doing have you end up in til aviv");
 }
@@ -40,6 +41,12 @@ if (content === "yo") {
   await message.reply("nigga stfu and hop off my circumsized dick for one second");
 }
 
+      if (/\bgood boy\b/i.test(content)) {
+  await message.reply("good goy");
+}
+      if (/\bthank you\b/i.test(content)) {
+  await message.reply("Thank you James, thank you!");
+}
 await handleLeveling(message, client);
     } catch (error) {
       logger.error('Error in messageCreate event:', error);

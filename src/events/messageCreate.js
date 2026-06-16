@@ -21,14 +21,10 @@ export default {
 
 const content = message.content.toLowerCase();
 
-if (/\bshlomie\b/i.test(content)) {
-  await message.reply("which one of you goys is talking about me?");
-}
-
 if (message.author.id === "1147637655262199918") {
   const replies = [
     "Freaky goy",
-    "John, how did your prostate exam go? ..."
+    "John, how did your prostate exam go? I think it's very interesting you enjoy having three fingers up your ass!"
   ];
 
   if (Math.random() < 0.40) {
@@ -36,6 +32,55 @@ if (message.author.id === "1147637655262199918") {
       replies[Math.floor(Math.random() * replies.length)]
     );
   }
+}
+
+if (message.author.id === "1079975965112926208") {
+  const replies = [
+    "Goy",
+    "Umm.. Abdoul? Why are you typing?",
+    "Oh no, not again.",
+    "What a good lebanese Goy!",
+    "אתה הולך לישראל",
+    "haha..*moan*"
+  ];
+
+  if (Math.random() < 0.40) {
+    await message.reply(
+      replies[Math.floor(Math.random() * replies.length)]
+    );
+  }
+}
+if (message.author.id === "478038943372410880") {
+  const replies = [
+    "Goy",
+    "Benchod?",
+    "Indian",
+    "Shut up Indian",
+    "*sniff* eugh you smell like shit",
+    "sybau indian"
+  ];
+
+  if (Math.random() < 0.80) {
+    await message.reply(
+      replies[Math.floor(Math.random() * replies.length)]
+    );
+  }
+}
+if (message.mentions.has(client.user)) {
+  const replies = [
+    "Oh my god bro",
+    "That's it, I'm calling my boy Yahu",
+    "מה אתה רוצה גוי",
+    "That's Prime minister Shlomie to you, Goy."
+  ];
+
+  await message.reply(
+    replies[Math.floor(Math.random() * replies.length)]
+  );
+}
+
+if (/\bshlomie\b/i.test(content)) {
+  await message.reply("which one of you goys is talking about me?");
 }
 
 if (/\bthank you\b/i.test(content)) {
@@ -58,33 +103,15 @@ if (/\bgeorge\b/i.test(content)) {
   await message.reply("GEEEEOOOrge EEEEEEEEEshak!");
 }
 
-if (message.author.id === "1079975965112926208") {
-  const replies = [
-    "Fuck nigga",
-    "Goy",
-    "Umm.. Abdoul? Why are you typing?",
-    "Oh no, not again.",
-    "What a good lebanese Goy!",
-    "אתה הולך לישראל",
-    "haha..*moan*"
-  ];
-
-  if (Math.random() < 0.40) {
-    await message.reply(
-      replies[Math.floor(Math.random() * replies.length)]
-    );
-  }
+if (content === "shlomie please tell abdoul to stfu") {
+  await message.reply(
+    "abdoul, you are a submissive and breedable goy, dont let me show you what the great wall of shlomie is capable of doing have you end up in tel aviv"
+  );
 }
 
-if (message.mentions.has(client.user)) {
-  const replies = [
-    "Oh my god bro",
-    "That's it, I'm calling my boy Yahu",
-    "מה אתה רוצה גוי"
-  ];
-
+if (content === "shlomie, which one of us here is a real nigga?") {
   await message.reply(
-    replies[Math.floor(Math.random() * replies.length)]
+    "nigga stfu and hop off my circumsized dick for one second"
   );
 }
 

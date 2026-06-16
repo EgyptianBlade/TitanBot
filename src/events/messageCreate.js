@@ -64,7 +64,6 @@ if (message.author.id === "1079975965112926208") {
     replies[Math.floor(Math.random() * replies.length)]
   );
 }
-}
 
 if (message.mentions.has(client.user)) {
   const replies = [

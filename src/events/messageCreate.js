@@ -44,6 +44,15 @@ if (/\israel\b/i.test(content)) {
       if (/\bgood boy\b/i.test(content)) {
   await message.reply("good goy");
 }
+      if (message.author.id === "1079975965112926208") {
+  const replies = [
+    "Fuck nigga",
+    "Goy",
+    "Umm.. Abdoul? Why are you typing?",
+    "Oh no, not again.",
+    "What a good lebanese Goy!",
+    "אתה הולך לישראל"
+  ];
 
        if (/\bshlomie\b/i.test(content)) {
   await message.reply("which one of you goys is talking about me?");

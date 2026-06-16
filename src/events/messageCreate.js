@@ -20,7 +20,7 @@ export default {
       if (message.author.bot || !message.guild) return;
 
 const content = message.content.toLowerCase();
-console.log(message.author.id);
+
 if (/\bshlomie\b/i.test(content)) {
   await message.reply("which one of you goys is talking about me?");
 }

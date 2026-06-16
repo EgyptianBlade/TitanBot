@@ -60,7 +60,7 @@ if (message.author.id === "478038943372410880") {
     "sybau indian"
   ];
 
-  if (Math.random() < 0.80) {
+  if (Math.random() < 0.70) {
     await message.reply(
       replies[Math.floor(Math.random() * replies.length)]
     );

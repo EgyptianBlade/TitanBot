@@ -21,30 +21,35 @@ export default {
 
 const content = message.content.toLowerCase();
 
-if (content === "shlomie") {
-  await message.reply("which one of you goys is talking about me");
+if (/\bshlomie\b/i.test(content)) {
+  await message.reply("which one of you goys is talking about me?");
 }
 
-if (message.mentions.has(client.user)) {
-  await message.reply("If I hear my name being mentioned one more time by one of you fuck niggas I'll rob all of you");
+if (/\bthank you\b/i.test(content)) {
+  await message.reply("Thank you James, thank you!");
 }
+
+if (/\bgood boy\b/i.test(content)) {
+  await message.reply("good goy");
+}
+
 if (/\b(money|bank|dollar|dollars)\b/i.test(content)) {
   await message.reply("*eyes widen, ears perk up* M-money..? *sniff sniff*");
 }
-if (/\israel\b/i.test(content)) {
+
+if (/\bisrael\b/i.test(content)) {
   await message.reply("hello goy, remember to donate 5 trillion to israel");
 }
-      if (content === "shlomie please tell abdoul to stfu") {
-  await message.reply("abdoul, you are a submissive and breedable goy, dont let me show you what the great wall of shlomie is capable of doing have you end up in til aviv");
+
+if (content === "shlomie please tell abdoul to stfu") {
+  await message.reply("abdoul, you are a submissive and breedable goy, dont let me show you what the great wall of shlomie is capable of doing have you end up in tel aviv");
 }
-      if (content === "shlomie, which one of us here is a real nigga?") {
+
+if (content === "shlomie, which one of us here is a real nigga?") {
   await message.reply("nigga stfu and hop off my circumsized dick for one second");
 }
 
-      if (/\bgood boy\b/i.test(content)) {
-  await message.reply("good goy");
-}
-      if (message.author.id === "1079975965112926208") {
+if (message.author.id === "1079975965112926208") {
   const replies = [
     "Fuck nigga",
     "Goy",
@@ -55,13 +60,14 @@ if (/\israel\b/i.test(content)) {
     "haha..*moan*"
   ];
 
-       if (/\bshlomie\b/i.test(content)) {
-  await message.reply("which one of you goys is talking about me?");
+  if (Math.random() < 0.25) {
+    await message.reply(
+      replies[Math.floor(Math.random() * replies.length)]
+    );
+  }
 }
-      if (/\bthank you\b/i.test(content)) {
-  await message.reply("Thank you James, thank you!");
-}
-      if (message.mentions.has(client.user)) {
+
+if (message.mentions.has(client.user)) {
   const replies = [
     "If I hear my name being mentioned one more time by one of you fuck niggas I'll rob all of you",
     "Oh my god bro",
@@ -70,10 +76,12 @@ if (/\israel\b/i.test(content)) {
     "That's Prime minister Shlomie to you, Goy."
   ];
 
-  return message.reply(
+  await message.reply(
     replies[Math.floor(Math.random() * replies.length)]
   );
 }
+
+await handleLeveling(message, client);
 await handleLeveling(message, client);
     } catch (error) {
       logger.error('Error in messageCreate event:', error);
